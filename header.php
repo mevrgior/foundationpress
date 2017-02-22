@@ -27,6 +27,7 @@
 
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 
+
 	<header id="masthead" class="site-header" role="banner">
 		<div class="title-bar" data-responsive-toggle="site-navigation">
 			<button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
@@ -50,6 +51,13 @@
 			</div>
 		</nav>
 	</header>
+
+	<div data-sticky-container>
+	  <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%" data-top-anchor="1" data-btm-anchor="content:bottom">
+	    <div class="title-bar-left"><!-- Content --></div>
+	    <div class="title-bar-right"><!-- Content --></div>
+	  </div>
+	</div>
 
 	<section class="container">
 		<?php do_action( 'foundationpress_after_header' );
