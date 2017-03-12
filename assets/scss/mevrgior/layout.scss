@@ -1,7 +1,54 @@
 //mystyle so
+$darkblue-main: rgb(0,65,81);
+$darkred-main: rgb(152,46,44);
 body {
-	//font-size: 1.4rem;
+	
 }
+
+h5 {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.top-header-menu {
+	a {
+		color: #fff;
+	}
+	& :hover, :focus, :active {
+		color: #ccc;
+	}
+}
+#masthead {
+	background-color: $darkblue-main;
+	border-bottom: 4px solid $darkred-main;
+}
+.top-bar {
+	background-color: $darkblue-main;
+	.menu {
+		background-color: $darkblue-main;
+	}
+}
+#searchform {
+	padding-top: 0.7rem;
+}
+#searchsubmit, #s {
+	height: 1.5rem;
+	padding: 0.2rem;
+}
+#footer-container {
+	background-color: $darkblue-main;
+	color: #fff;
+}
+#footer {
+	li {
+		display: block;
+		a {
+			padding-left: 0;
+		}
+	}
+
+}
+//font-size: 1.4rem;
+
 // snippet http://zurb.com/building-blocks/shrinking-sticky-navigation-menu-f6
 // .header {
 

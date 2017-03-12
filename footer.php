@@ -13,6 +13,18 @@
 		</section>
 		<div id="footer-container">
 			<footer id="footer">
+				<div class="small-6 columns">
+					<h5>Kontakt</h5>
+				</div>
+				<div class="small-3 columns">
+					<h3>Footer</h3>
+					<?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
+
+				</div>
+				<div class="small-3 columns">
+					<h3>Projekt</h3>
+				</div>
+				
 				<?php do_action( 'foundationpress_before_footer' ); ?>
 				<?php dynamic_sidebar( 'footer-widgets' ); ?>
 				<?php do_action( 'foundationpress_after_footer' ); ?>
