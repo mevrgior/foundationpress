@@ -9,13 +9,22 @@ h5 {
 	text-transform: uppercase;
 	font-weight: bold;
 }
-.top-header-menu {
+.top-header-menu, .top-bar-right {
 	a {
 		color: #fff;
+		text-transform: uppercase;
+		font-size: rem-calc(12);
+
 	}
 	& :hover, :focus, :active {
 		color: #ccc;
+		cursor: pointer;
 	}
+.top-bar-right {
+	a {
+		font-size: rem-calc(14);
+	}
+}
 }
 #masthead {
 	background-color: $darkblue-main;
@@ -27,6 +36,9 @@ h5 {
 		background-color: $darkblue-main;
 	}
 }
+.top-bar-right {
+	text-transform: uppercase;
+}
 #searchform {
 	padding-top: 0.7rem;
 }
@@ -35,7 +47,8 @@ h5 {
 	padding: 0.2rem;
 }
 #footer-container {
-	background-color: $darkblue-main;
+	//background-color: $darkblue-main;
+	background: $darkblue-main url('../images/uptriangledarkblue.png') no-repeat;
 	color: #fff;
 }
 #footer {
