@@ -1,12 +1,21 @@
 //mystyle so
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans:600');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 $darkblue-main: rgb(0,65,81);
 $darkred-main: rgb(152,46,44);
+$light-grey: rgb(250,250,250);
+
+
 body {
 	
+	font-family: 'Lato', sans-serif;
+	background-color: $light-grey;
 }
-h5 {
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
 	text-transform: uppercase;
-	font-weight: bold;
 }
 svg {
 	display: block;
@@ -82,7 +91,7 @@ svg {
 	color: #fff;
 }
 .bg-white {
-	background-color: #fff;
+	background-color: $light-grey;
 	color: #000;
 }
 .bg-clear {
@@ -115,11 +124,65 @@ svg {
 #blue-triangle {
 	background-color:#fff;
 	//background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><linearGradient id='gradient'><stop offset='10%' stop-color='%23F00'/><stop offset='90%' stop-color='%23fcc'/> </linearGradient><rect fill='url(%23gradient)' x='0' y='0' width='100%' height='100%'/></svg>");
-}#footer-container {
-	//background-color: $darkblue-main;
+}
+#footer-container {
+	background-color: $darkblue-main;
+	border-color: $darkblue-main;
+	color: #fff;
 	// background: $darkblue-main url('../images/uptriangledarkblue.png') no-repeat;
-	// color: #fff;
 	// margin-top: 0;
+	
+}
+.sep-down {
+	position: absolute;
+    width: 100%;
+    background-color: inherit;
+    border-color: inherit;
+    z-index: 1;
+
+    bottom: 0;
+    &:before {
+    	content: '';
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-color: inherit;
+		border-width: 32px 0 0 900px;
+		border-width: 34px 0 0 50vw;
+		border-left-width: 50vw;
+		position: absolute;
+		z-index: 9;
+
+		border-top-color: transparent;
+		border-bottom-color: transparent;
+		right: 49.99%;
+		bottom: -32px;
+    }
+    &:after {
+    	content: '';
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-color: inherit;
+		border-width: 32px 0 0 900px;
+		border-width: 34px 0 0 50vw;
+		border-left-width: 50vw;
+		position: absolute;
+		z-index: 9;
+
+		border-top-color: transparent;
+		border-bottom-color: transparent;
+		left: 50%;
+		bottom: -32px;
+    }
+}
+.sep-up {
+
+    position: absolute;
+    width: 100%;
+    background-color: inherit;
+    border-color: inherit;
+    z-index: 1;
 	&:before {
 		content: '';
 		width: 0;
@@ -136,6 +199,26 @@ svg {
 		border-bottom-color: transparent;
 		left: 49.99%;
 		top: -32px;
+	}
+	&:after {
+		content: '';
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-color: inherit;
+		border-width: 32px 0 0 900px;
+		border-width: 34px 0 0 50vw;
+		border-left-width: 50vw;
+		position: absolute;
+		z-index: 9;
+
+		border-top-color: transparent;
+		border-bottom-color: transparent;
+		right: 49.99%;
+		top: -32px;
+
+		-webkit-transform: rotateY(180deg);
+		transform: rotateY(180deg);
 	}
 }
 #footer {

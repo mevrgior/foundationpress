@@ -17,7 +17,7 @@ get_header(); ?>
 
 <div class="sec-1 bg-blue">
 	<div class="glob-container">
-		<div class="text-container">
+		<div > <!-- class="text-container" -->
 			<h1>
 				<?php 
 					$first_post_home = get_post(17); 
@@ -38,7 +38,7 @@ get_header(); ?>
 </div>
 <div class="sec-2 bg-white">
 	<div class="glob-container">
-		<div class="text-container">
+		<div > <!-- class="text-container" -->
 			<h1>
 				<?php 
 					$first_post_home = get_post(17); 
@@ -60,7 +60,7 @@ get_header(); ?>
 <div class="sec-img">
 	
 </div>
-<div id="page" role="main">
+<div id="page-full-width" role="main">
 	<article class="main-content">
 	<?php if ( have_posts() ) : ?>
 
@@ -87,7 +87,7 @@ get_header(); ?>
 		<?php endif; ?>
 
 	</article>
-	<?php get_sidebar(); ?>
+	<?php /* get_sidebar();*/ ?>
 
 </div>
 <!-- <div class="bg-clear">

@@ -12,6 +12,7 @@
 
 		</section>
 		<div id="footer-container">
+			<div class="sep-up"></div>
 			<footer id="footer">
 				<div class="medium-6 columns">
 					<h5>Kontakt</h5>
