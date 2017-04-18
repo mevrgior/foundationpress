@@ -24,6 +24,9 @@
 				</div>
 				<div class="medium-3 columns">
 					<h5>Projekt</h5>
+					<img class="project-logos" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/BSMBV.png">					
+					<img class="project-logos" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_MORE_KV.png">
+					<img class="project-logos" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/SGKV_Logo_2014_highres.png">
 				</div>
 				
 				<?php do_action( 'foundationpress_before_footer' ); ?>
