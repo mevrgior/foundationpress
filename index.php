@@ -19,12 +19,12 @@ get_header(); ?>
 	<div class="sep-top-down"></div>
 	<div class="glob-container">
 		<div > <!-- class="text-container" -->
-			<h1>
+			<h2>
 				<?php 
 					$first_post_home = get_post(17); 
 					echo apply_filters( 'the_content', $first_post_home->post_title );
 				?>
-			</h1>
+			</h2>
 			<p>
 				<?php 
 					$first_post_home = get_post(17); 
@@ -39,12 +39,12 @@ get_header(); ?>
 	<div class="sep-up"></div>
 	<div class="glob-container">
 		<div > <!-- class="text-container" -->
-			<h1>
+			<h2>
 				<?php 
 					$first_post_home = get_post(17); 
 					echo apply_filters( 'the_content', $first_post_home->post_title );
 				?>
-			</h1>
+			</h2>
 			<p>
 				<?php 
 					$first_post_home = get_post(17); 
