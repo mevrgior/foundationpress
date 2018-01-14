@@ -15,6 +15,10 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<?php wp_head(); ?>
+		<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.3/mapbox.css' rel='stylesheet' />
+		<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.3/leaflet.fullscreen.css' rel='stylesheet' />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300' rel='stylesheet' type='text/css'>
+		<link href='css/airportmap.css' rel='stylesheet' type='text/css'>
 	</head>
 	<body <?php body_class(); ?>>
 	<?php do_action( 'foundationpress_after_body' ); ?>
@@ -30,10 +34,15 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="row">
-			<div class="small-8 columns top-header-menu">
-				<?php wp_nav_menu( array( 'theme_location' => 'top-header-menu' ) ); ?>
+			<div class="small-0 medium-8 columns top-header-menu">
+				<?php 
+				if (has_nav_menu('top-header-menu')) {
+					wp_nav_menu( array( 'theme_location' => 'top-header-menu' ) ); 
+
+				}				
+				?>
 			</div>
-			<div class="small-4 columns">
+			<div class="small-12 medium-4 columns">
 				<?php get_search_form(); ?>
 			</div>
 		</div>
@@ -41,16 +50,20 @@
 		<div class="title-bar" data-responsive-toggle="site-navigation">
 			<button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
 			<div class="title-bar-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Logo hier<?php bloginfo( 'name' ); ?></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img id="mobile-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/LogoKVinfo.png" alt="More KV">
+					<?/*php bloginfo( 'name' ); */?>
+				</a>
 			</div>
 		</div>
 		<!-- navaigation -->
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
-			<div class="row">
+			<div class="row page-logo-wrapper">
 				<div class="top-bar-left">
-					<ul class="menu">
-						<li class="home"><a id="page-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Logo-KVinfo.svg" alt="More KV"><?/*php bloginfo( 'name' );*/?></a></li>
-					</ul>
+					<a id="page-logo-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<img id="page-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/LogoKVinfo.png" alt="More KV">
+						<?/*php bloginfo( 'name' );*/?>
+					</a>
 				</div>
 				<div class="top-bar-right">
 					<?php foundationpress_top_bar_r(); ?>
@@ -63,12 +76,12 @@
 		</nav>
 	</header>
 
-	<div data-sticky-container>
-	  <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%" data-top-anchor="1" data-btm-anchor="content:bottom">
-	    <div class="title-bar-left"><!-- Content --></div>
-	    <div class="title-bar-right"><!-- Content --></div>
-	  </div>
-	</div>
-	<div id="top-slider"></div>
+	<!-- <div data-sticky-container>
+		<div data-sticky data-margin-top="0" style="width:100%">
+			
+		
+		</div>
+	</div> -->
+	
 	<section class="container">
 		<?php do_action( 'foundationpress_after_header' );

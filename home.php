@@ -15,48 +15,65 @@
 
 get_header(); ?>
 
+<div id="top-slider">
+	<div id="video-wrap">	
+		<?php do_action( 'foundationpress_before_slider' ); ?>
+		<?php dynamic_sidebar( 'slider-widgets' ); ?>
+		<?php do_action( 'foundationpress_after_slider' ); ?>
+	</div>
+</div>
+
 <div class="sec-1 bg-blue">
 	<div class="sep-top-down"></div>
 	<div class="glob-container">
-		<div > <!-- class="text-container" -->
-			<h2>
-				<?php 
-					$first_post_home = get_post(17); 
-					echo apply_filters( 'the_content', $first_post_home->post_title );
-				?>
-			</h2>
-			<p>
-				<?php 
-					$first_post_home = get_post(17); 
-					echo apply_filters( 'the_content', $first_post_home->post_content );
-				?>
-			</p>
+		<div id="widget-1-wrap">	
+			<?php do_action( 'foundationpress_before_slider' ); ?>
+			<?php dynamic_sidebar( 'widget1-home' ); ?>
+			<?php do_action( 'foundationpress_after_slider' ); ?>
 		</div>
 	</div>
-	
 </div>
-<div class="sec-2 bg-white">
+
+<div class="bg-white">
 	<div class="sep-up"></div>
 	<div class="glob-container">
-		<div > <!-- class="text-container" -->
-			<h2>
-				<?php 
-					$first_post_home = get_post(1); 
-					echo apply_filters( 'the_content', $first_post_home->post_title );
-				?>
-			</h1>
-			<p>
-				<?php 
-					$first_post_home = get_post(1); 
-					echo apply_filters( 'the_content', $first_post_home->post_content );
-				?>
-			</p>
+		<div id="widget-2-wrap">	
+			<?php do_action( 'foundationpress_before_slider' ); ?>
+			<?php dynamic_sidebar( 'widget2-home' ); ?>
+			<?php do_action( 'foundationpress_after_slider' ); ?>
 		</div>
 	</div>
-	<div class="sep-down"></div>
+	<!-- <div class="sep-down"></div> -->
 </div>
-<div class="sec-img">
-	
+
+<div class="sec-1 bg-blue">
+	<div class="sep-top-down"></div>
+	<div class="glob-container">
+		<div id="widget-3-wrap">	
+			<?php do_action( 'foundationpress_before_slider' ); ?>
+			<?php dynamic_sidebar( 'widget3-home' ); ?>
+			<?php do_action( 'foundationpress_after_slider' ); ?>
+		</div>
+	</div>
 </div>
+
+<div class="bg-white">
+	<div class="sep-up"></div>
+	<div class="glob-container">
+		<div id="widget-4-wrap">	
+			<?php do_action( 'foundationpress_before_slider' ); ?>
+			<?php dynamic_sidebar( 'widget4-home' ); ?>
+			<?php do_action( 'foundationpress_after_slider' ); ?>
+		</div>
+	</div>
+	<!-- <div class="sep-down"></div> -->
+</div>
+
+<!-- change css of sec-img section to make widget visible -->
+<!-- <div class="sec-img"> -->
+	<?php /* do_action( 'foundationpress_before_slider' ); */ ?>
+	<?php /* dynamic_sidebar( 'bottom-home' ); */ ?>
+	<?php /* do_action( 'foundationpress_after_slider' ); */ ?>
+<!-- </div> -->
 
 <?php get_footer();

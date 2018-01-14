@@ -14,19 +14,14 @@ get_header(); ?>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>
-	<div class="bg-white">
-		<!-- <div class="sep-up"></div> -->
+	<div class="sec-2 bg-white">
+		<div class="sep-up"></div>
 		<div class="glob-container">
-			
-			<!-- <div class="header-block_post">
-				<div class="header-bg_post">
-					<h2> header text </h2>
-				</div>
-				<div class="sep-down"></div>
-			</div> -->
-
 			<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
-			
+			<header>
+				<h1 class="entry-title"><?php the_title(); ?></h1>
+				<?php foundationpress_entry_meta(); ?>
+			</header>
 			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 			<div class="entry-content">
 				<?php the_content(); ?>
@@ -36,6 +31,10 @@ get_header(); ?>
 				<?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
 				<p><?php the_tags(); ?></p>
 			</footer>
+			<?php the_post_navigation(); ?>
+			<?php do_action( 'foundationpress_post_before_comments' ); ?>
+			<?php comments_template(); ?>
+			<?php do_action( 'foundationpress_post_after_comments' ); ?>
 		</article>
 		</div>
 		<!-- <div class="sep-down"></div> -->
